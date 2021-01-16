@@ -1,0 +1,15 @@
+#!/bin/bash -e
+
+MACHINE=${MACHINE:-mcm-imx8m-mini}
+DISTRO=${DISTRO:-fslc-framebuffer}
+EULA=1
+T="../sources/compulab-fslc-bsp/templates"
+
+source setup-environment $@
+
+for _d in ${T}/*;do
+    _file=$(basename ${_d})
+    for _f in ${_d}/*;do
+        cat ${_f} >> conf/${_file}
+    done;
+done

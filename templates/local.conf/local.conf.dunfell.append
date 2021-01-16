@@ -1,0 +1,22 @@
+PACKAGE_CLASSES = 'package_deb package_tar'
+
+CORE_IMAGE_EXTRA_INSTALL += " cl-uboot cl-deploy cl-launcher cl-stest cl-camera u-boot-script "
+CORE_IMAGE_EXTRA_INSTALL += " dhcp-client memtester htop iotop tmux iperf3 "
+IMAGE_FEATURES += " package-management ssh-server-openssh "
+
+LICENSE_FLAGS_WHITELIST = "commercial"
+
+BBMASK += " compulab-ucm-imx8m-mini.bb "
+BBMASK += " compulab-qt5-build-env.bb "
+BBMASK += " u-boot-imx-fw-utils_2019.04.bbappend "
+BBMASK += " u-boot-fw-utils_%.bbappend "
+
+PREFERRED_RROVIDER_u-boot-fw-utils = "u-boot-compulab-fw-utils"
+
+PREFERRED_PROVIDER_virtual/kernel_mcm-imx8m-mini = "linux-compulab"
+PREFERRED_PROVIDER_virtual/kernel_ucm-imx8m-mini = "linux-compulab"
+PREFERRED_PROVIDER_virtual/kernel_iot-gate-imx8  = "linux-compulab"
+
+PREFERRED_PROVIDER_virtual/bootloader_mcm-imx8m-mini = "u-boot-compulab"
+PREFERRED_PROVIDER_virtual/bootloader_ucm-imx8m-mini = "u-boot-compulab"
+PREFERRED_PROVIDER_virtual/bootloader_iot-gate-imx8  = "u-boot-compulab"
