@@ -1,4 +1,3 @@
-PACKAGE_CLASSES = 'package_deb package_tar'
 
 CORE_IMAGE_EXTRA_INSTALL += " cl-uboot cl-deploy u-boot-script "
 CORE_IMAGE_EXTRA_INSTALL += " dhcp-client memtester htop iotop tmux iperf3 "
