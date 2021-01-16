@@ -41,7 +41,7 @@ cd -
 ```
 repo sync
 cd .repo/local_manifests
-ln -sf ../../sources/meta-compulab-bsp/scripts/${LREPO} .
+ln -sf ../../sources/compulab-fslc-bsp/scripts/${LREPO} .
 cd -
 ```
 
