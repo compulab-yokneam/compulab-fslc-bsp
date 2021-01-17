@@ -19,7 +19,7 @@ mkdir compulab-freescale-bsp && cd compulab-freescale-bsp
 CompuLab machine | UCM-iMX8M-Mini | MCM-iMX8M-Mini | iot-gate-imx8 |
 --- | --- | --- | --- |
 `MACHINE` environment setting| `MACHINE=ucm-imx8m-mini` |`MACHINE=mcm-imx8m-mini` |`MACHINE=iot-gate-imx8` |
-`LREPO` environment setting | `LREPO=compulab-setup.xml` |`LREPO=compulab-setup.xml` |`LREPO=compulab-setup-iot.xml` |
+`LREPO` environment setting | `LREPO=compulab-bsp-setup.xml` |`LREPO=compulab-bsp-setup.xml` |`LREPO=compulab-bsp-setup-iot.xml` |
 
 ## Initialize repo manifests
 
