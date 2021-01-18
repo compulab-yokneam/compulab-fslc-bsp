@@ -1,0 +1,7 @@
+BBLAYERS += " \
+    ${BSPDIR}/sources/meta-openembedded/meta-gnome \
+    ${BSPDIR}/sources/meta-openembedded/meta-networking \
+    ${BSPDIR}/sources/meta-openembedded/meta-filesystems \
+    ${BSPDIR}/sources/meta-openembedded/meta-xfce \
+    ${BSPDIR}/sources/meta-compulab-bsp/meta-xfce \
+"
