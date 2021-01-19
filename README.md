@@ -18,7 +18,7 @@ mkdir compulab-freescale-bsp && cd compulab-freescale-bsp
 
 CompuLab machine | UCM-iMX8M-Mini | MCM-iMX8M-Mini | iot-gate-imx8 |
 --- | --- | --- | --- |
-`MACHINE` environment setting| `MACHINE=ucm-imx8m-mini` |`MACHINE=mcm-imx8m-mini` |`MACHINE=iot-gate-imx8` |
+`MACHINE` environment setting| `export MACHINE=ucm-imx8m-mini` |`export MACHINE=mcm-imx8m-mini` |`export MACHINE=iot-gate-imx8` |
 `LREPO` environment setting | `LREPO=compulab-bsp-setup.xml` |`LREPO=compulab-bsp-setup.xml` |`LREPO=compulab-bsp-setup-iot.xml` |
 
 ## Initialize repo manifests
@@ -49,7 +49,7 @@ cd -
 
 * Initialize the build environment:
 ```
-source sources/compulab-fslc-bsp/tools/setup-env -b build-fslc-${MACHINE}
+source sources/compulab-fslc-bsp/tools/setup-env build-fslc-${MACHINE}
 ```
 * Building the image:
 ```
