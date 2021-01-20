@@ -53,5 +53,5 @@ source sources/compulab-fslc-bsp/tools/setup-env build-fslc-${MACHINE}
 ```
 * Building the image:
 ```
-bitbake -k core-image-base
+bitbake -k core-image-full-cmdline
 ```
