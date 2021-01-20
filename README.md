@@ -33,7 +33,7 @@ repo sync
 ```
 mkdir -p .repo/local_manifests
 cd .repo/local_manifests
-wget https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/master/scripts/${LREPO}
+wget https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/iot-gate-imx8_r0.1/scripts/${LREPO}
 cd -
 ```
 
