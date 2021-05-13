@@ -3,9 +3,9 @@
 MACHINE=${MACHINE:-mcm-imx8m-mini}
 DISTRO=${DISTRO:-fslc-framebuffer}
 EULA=1
-T="../sources/compulab-fslc-bsp/templates"
+T=$(dirname $(dirname $(readlink -f ${BASH_SOURCE[0]})))"/templates"
 
-source setup-environment $@
+[[ -n ${NO_SETUP} ]] || source setup-environment $@
 
 for _d in ${T}/*;do
     _file=$(basename ${_d})
