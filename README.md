@@ -29,23 +29,17 @@ Machine | Environment |
 * FSL Community
 ```
 repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b dunfell
-repo sync
 ```
 
 * CompuLab
 ```
 mkdir -p .repo/local_manifests
-cd .repo/local_manifests
-wget https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/master/scripts/${LREPO}
-cd -
+wget --directory-prefix .repo/local_manifests https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/master/scripts/${LREPO}
 ```
 
 * Sync Them all
 ```
 repo sync
-cd .repo/local_manifests
-ln -sf ../../sources/compulab-fslc-bsp/scripts/${LREPO} .
-cd -
 ```
 
 ## Setup build environment
