@@ -14,12 +14,15 @@ PATH=${PATH}:~/bin
 ```
 mkdir compulab-freescale-bsp && cd compulab-freescale-bsp
 ```
-* Set a CompuLab machine:
+* Set CompuLab machine and repo name environmet varables:
 
-CompuLab machine | UCM-iMX8M-Mini | MCM-iMX8M-Mini | iot-gate-imx8 |
---- | --- | --- | --- |
-`MACHINE` environment setting| `export MACHINE=ucm-imx8m-mini` |`export MACHINE=mcm-imx8m-mini` |`export MACHINE=iot-gate-imx8` |
-`LREPO` environment setting | `LREPO=compulab-bsp-setup.xml` |`LREPO=compulab-bsp-setup.xml` |`LREPO=compulab-bsp-setup-iot.xml` |
+Machine | Environment |
+--- | --- |
+`ucm-imx8m-mini` | `export MACHINE=ucm-imx8m-mini LREPO=compulab-bsp-setup.xml`
+`mcm-imx8m-mini` | `export MACHINE=mcm-imx8m-mini LREPO=compulab-bsp-setup.xml`
+`iot-gate-imx8`  | `export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-iot.xml`
+`ucm-imx8m-plus` | `export MACHINE=ucm-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
+`som-imx8m-plus` | `export MACHINE=som-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
 
 ## Initialize repo manifests
 
