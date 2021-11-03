@@ -2,7 +2,7 @@
   <manifest>
   <remote fetch="https://github.com/compulab-yokneam" name="compulab"/>
 
-  <project name="compulab-fslc-bsp" remote="compulab" revision="master" path="sources/compulab-fslc-bsp" >
+  <project name="compulab-fslc-bsp" remote="compulab" revision="devel" path="sources/compulab-fslc-bsp" >
       <linkfile src="meta-fslc/imx8mp" dest="sources/meta-fslc-som" />
       <linkfile src="meta-fslc/imx" dest="sources/meta-fslc-som-common" />
   </project>

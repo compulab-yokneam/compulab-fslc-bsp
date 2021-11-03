@@ -34,7 +34,7 @@ repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b dunfell
 * CompuLab
 ```
 mkdir -p .repo/local_manifests
-wget --directory-prefix .repo/local_manifests https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/master/scripts/${LREPO}
+wget --directory-prefix .repo/local_manifests https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/devel/scripts/${LREPO}
 ```
 
 * Sync Them all
