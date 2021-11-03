@@ -4,6 +4,7 @@
 
   <project name="compulab-fslc-bsp" remote="compulab" revision="master" path="sources/compulab-fslc-bsp" >
       <linkfile src="meta-fslc/imx8mp" dest="sources/meta-fslc-som" />
+      <linkfile src="meta-fslc/imx" dest="sources/meta-fslc-som-common" />
   </project>
 
   <project name="meta-compulab" remote="compulab" revision="devel" path="sources/meta-compulab"/>
