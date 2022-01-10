@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <manifest>
+  <remote fetch="https://github.com/compulab-yokneam" name="compulab"/>
+
+  <project name="compulab-fslc-bsp" remote="compulab" revision="devel" path="sources/compulab-fslc-bsp" >
+      <linkfile src="meta-fslc/imx7" dest="sources/meta-fslc-som" />
+      <linkfile src="meta-fslc/imx" dest="sources/meta-fslc-som-common" />
+  </project>
+
+  <project name="meta-compulab" remote="compulab" revision="devel" path="sources/meta-compulab"/>
+  <project name="meta-compulab-bsp" remote="compulab" revision="master" path="sources/meta-compulab-bsp"/>
+  <project name="meta-bsp-imx7" remote="compulab" revision="dunfell" path="sources/meta-compulab-som"/>
+
+  </manifest>
