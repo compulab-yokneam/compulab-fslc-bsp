@@ -23,6 +23,7 @@ Machine | Environment |
 `iot-gate-imx8`  | `export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-iot.xml`
 `ucm-imx8m-plus` | `export MACHINE=ucm-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
 `som-imx8m-plus` | `export MACHINE=som-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
+`cl-som-imx7` | `export MACHINE=cl-som-imx7 LREPO=compulab-bsp-setup-imx7.xml`
 
 ## Initialize repo manifests
 
