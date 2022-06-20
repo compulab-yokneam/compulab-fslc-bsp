@@ -3,6 +3,7 @@ BBLAYERS += " \
 	${BSPDIR}/sources/meta-compulab-bsp/meta-desktop \
 	${BSPDIR}/sources/meta-compulab-bsp/meta-bsp \
 	${BSPDIR}/sources/meta-compulab-bsp/meta-graphics \
+	${BSPDIR}/sources/meta-compulab-uefi \
 	${BSPDIR}/sources/meta-compulab-som \
 	${BSPDIR}/sources/meta-fslc-som \
 	${BSPDIR}/sources/meta-fslc-som-common \

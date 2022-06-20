@@ -2,10 +2,11 @@
 PACKAGE_CLASSES = "package_deb"
 
 CORE_IMAGE_EXTRA_INSTALL += " cl-uboot cl-deploy "
-CORE_IMAGE_EXTRA_INSTALL += " dhcp-client memtester htop iotop tmux iperf3 "
-CORE_IMAGE_EXTRA_INSTALL_append_iot-gate-imx8 = " u-boot-script "
+CORE_IMAGE_EXTRA_INSTALL += " memtester htop iotop tmux iperf3 "
+CORE_IMAGE_EXTRA_INSTALL += " libubootenv-bin u-boot-compulab-env "
+CORE_IMAGE_EXTRA_INSTALL:append:iot-gate-imx8 = " u-boot-script "
 IMAGE_FEATURES += " package-management ssh-server-openssh "
 
-LICENSE_FLAGS_WHITELIST = "commercial"
+LICENSE_FLAGS_ACCEPTED = "commercial"
 
 INHERIT = "rm_work"

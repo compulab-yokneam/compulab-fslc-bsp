@@ -18,24 +18,24 @@ mkdir compulab-freescale-bsp && cd compulab-freescale-bsp
 
 Machine | Environment |
 --- | --- |
-`ucm-imx8m-mini` | `export MACHINE=ucm-imx8m-mini LREPO=compulab-bsp-setup-imx8mm.xml`
-`mcm-imx8m-mini` | `export MACHINE=mcm-imx8m-mini LREPO=compulab-bsp-setup-imx8mm.xml`
-`iot-gate-imx8`  | `export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-iot.xml`
+~~`ucm-imx8m-mini`~~ | ~~`export MACHINE=ucm-imx8m-mini LREPO=compulab-bsp-setup-imx8mm.xml`~~
+~~`mcm-imx8m-mini`~~ | ~~`export MACHINE=mcm-imx8m-mini LREPO=compulab-bsp-setup-imx8mm.xml`~~
+~~`iot-gate-imx8`~~  | ~~`export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-iot.xml`~~
 `ucm-imx8m-plus` | `export MACHINE=ucm-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
-`som-imx8m-plus` | `export MACHINE=som-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
-`cl-som-imx7` | `export MACHINE=cl-som-imx7 LREPO=compulab-bsp-setup-imx7.xml`
+~~`som-imx8m-plus`~~ | ~~`export MACHINE=som-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`~~
+~~`cl-som-imx7`~~ | ~~`export MACHINE=cl-som-imx7 LREPO=compulab-bsp-setup-imx7.xml`~~
 
 ## Initialize repo manifests
 
 * FSL Community
 ```
-repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b dunfell
+repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b kirkstone
 ```
 
 * CompuLab
 ```
 mkdir -p .repo/local_manifests
-wget --directory-prefix .repo/local_manifests https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/devel/scripts/${LREPO}
+wget --directory-prefix .repo/local_manifests https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/kirkstone/scripts/${LREPO}
 ```
 
 * Sync Them all
@@ -51,5 +51,5 @@ source sources/compulab-fslc-bsp/tools/setup-env build-fslc-${MACHINE}
 ```
 * Building the image:
 ```
-bitbake -k core-image-base
+bitbake -k core-image-full-cmdline
 ```
