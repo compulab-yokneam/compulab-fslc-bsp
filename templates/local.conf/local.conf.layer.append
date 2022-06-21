@@ -2,6 +2,7 @@
 PACKAGE_CLASSES = "package_deb"
 
 CORE_IMAGE_EXTRA_INSTALL += " cl-uboot cl-deploy "
+CORE_IMAGE_EXTRA_INSTALL += " cl-camera v4l-utils "
 CORE_IMAGE_EXTRA_INSTALL += " memtester htop iotop tmux iperf3 "
 CORE_IMAGE_EXTRA_INSTALL += " libubootenv-bin u-boot-compulab-env "
 CORE_IMAGE_EXTRA_INSTALL:append:iot-gate-imx8 = " u-boot-script "

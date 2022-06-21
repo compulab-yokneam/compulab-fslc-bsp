@@ -1,11 +1,18 @@
 #!/bin/bash -e
 
-MACHINE=${MACHINE:-mcm-imx8m-mini}
+MACHINE=${MACHINE:-ucm-imx8m-plus}
 DISTRO=${DISTRO:-fslc-framebuffer}
 EULA=1
 T=$(dirname $(dirname $(readlink -f ${BASH_SOURCE[0]})))"/templates"
 
-[[ -n ${NO_SETUP} ]] || source setup-environment $@
+BD=$(cat <<< $@ | awk '$0=$NF')
+
+if [[ -d ${BD} ]];then
+
+echo "Back to the build environment ${BD}"
+    source setup-environment ${BD}
+else
+    source setup-environment $@
 
 for _d in ${T}/*;do
     _file=$(basename ${_d})
@@ -13,3 +20,4 @@ for _d in ${T}/*;do
         cat ${_f} >> conf/${_file}
     done;
 done
+fi
