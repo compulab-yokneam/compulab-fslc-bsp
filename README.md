@@ -45,11 +45,14 @@ repo sync
 
 ## Setup build environment
 
-* Initialize the build environment:
+* Initialize the build environment and build:
+
+Distro | Setup command  | Build command |
+--- | --- | --- |
+fslc-xwayland | DISTRO=fslc-xwayland source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k fsl-image-multimedia-full```
+fslc-framebuffer | DISTRO=fslc-framebuffer compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k core-image-full-cmdline```
+
+* Get back to the build environment:
 ```
-source sources/compulab-fslc-bsp/tools/setup-env build-fslc-${MACHINE}
-```
-* Building the image:
-```
-bitbake -k core-image-full-cmdline
+source compulab-setup-environment build-fslc-${MACHINE}
 ```
