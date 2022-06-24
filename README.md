@@ -20,7 +20,7 @@ Machine | Environment |
 --- | --- |
 ~~`ucm-imx8m-mini`~~ | ~~`export MACHINE=ucm-imx8m-mini LREPO=compulab-bsp-setup-imx8mm.xml`~~
 ~~`mcm-imx8m-mini`~~ | ~~`export MACHINE=mcm-imx8m-mini LREPO=compulab-bsp-setup-imx8mm.xml`~~
-~~`iot-gate-imx8`~~  | ~~`export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-iot.xml`~~
+`iot-gate-imx8`  | `export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-iot.xml`
 `ucm-imx8m-plus` | `export MACHINE=ucm-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
 ~~`som-imx8m-plus`~~ | ~~`export MACHINE=som-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`~~
 ~~`cl-som-imx7`~~ | ~~`export MACHINE=cl-som-imx7 LREPO=compulab-bsp-setup-imx7.xml`~~
