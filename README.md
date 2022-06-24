@@ -50,7 +50,7 @@ repo sync
 Distro | Setup command  | Build command |
 --- | --- | --- |
 fslc-xwayland | DISTRO=fslc-xwayland source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k fsl-image-multimedia-full```
-fslc-framebuffer | DISTRO=fslc-framebuffer compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k core-image-full-cmdline```
+fslc-framebuffer | DISTRO=fslc-framebuffer source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k core-image-full-cmdline```
 
 * Get back to the build environment:
 ```
