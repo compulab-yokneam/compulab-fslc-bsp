@@ -21,7 +21,7 @@ Machine | Environment |
 `ucm-imx8m-mini` | `export MACHINE=ucm-imx8m-mini LREPO=compulab-bsp-setup-imx8mm.xml`
 `iot-gate-imx8`  | `export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-iot.xml`
 `ucm-imx8m-plus` | `export MACHINE=ucm-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
-`sbc-iot-imx8m-plus` | `export MACHINE=sbc-iot-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
+`iot-gate-imx8plus` | `export MACHINE=sbc-iot-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
 
 
 ## Initialize repo manifests
@@ -49,7 +49,7 @@ repo sync
 Distro | Setup command  | Build command |
 --- | --- | --- |
 fslc-xwayland | DISTRO=fslc-xwayland source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k fsl-image-multimedia-full```
-fslc-framebuffer | DISTRO=fslc-framebuffer source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k core-image-full-cmdline```
+fslc-framebuffer | DISTRO=fslc-framebuffer source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k fsl-image-network-full-cmdline```
 
 * Get back to the build environment:
 ```
