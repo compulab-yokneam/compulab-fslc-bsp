@@ -1,3 +1,4 @@
+# Optional desktop environmet layers
 BBLAYERS += " \
     ${BSPDIR}/sources/meta-openembedded/meta-gnome \
     ${BSPDIR}/sources/meta-openembedded/meta-networking \
