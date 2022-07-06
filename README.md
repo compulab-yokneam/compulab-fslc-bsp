@@ -12,7 +12,7 @@ PATH=${PATH}:~/bin
 
 * WorkDir
 ```
-mkdir compulab-freescale-bsp && cd compulab-freescale-bsp
+mkdir compulab-fslc-bsp && cd compulab-fslc-bsp
 ```
 * Set CompuLab machine and repo name environmet varables:
 
