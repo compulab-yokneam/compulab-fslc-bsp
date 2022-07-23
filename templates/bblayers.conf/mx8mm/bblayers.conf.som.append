@@ -1,0 +1,4 @@
+# mx8mp
+BBLAYERS += " \
+	${BSPDIR}/sources/meta-bsp-imx8mm \
+"

@@ -1,3 +1,11 @@
+# Disclaimer
+
+!WARNING! | This is a Unified MX8 BSP for demo purpouse only.<br>Comes w/out any support.|
+--- | --- |
+
+!NOTE! |Don't try using the same build folder for different machines.<br>Each machine has to have its own build folder.<br>The setup file creates a uniqe ```conf/bblayers.conf``` file for each machine.|
+--- | --- |
+
 # Configuring the build
 
 ## Setup Yocto environment
@@ -18,10 +26,10 @@ mkdir compulab-fslc-bsp && cd compulab-fslc-bsp
 
 Machine | Environment |
 --- | --- |
-`ucm-imx8m-mini` | `export MACHINE=ucm-imx8m-mini LREPO=compulab-bsp-setup-imx8mm.xml`
-`iot-gate-imx8`  | `export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-iot.xml`
-`ucm-imx8m-plus` | `export MACHINE=ucm-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
-`iot-gate-imx8plus` | `export MACHINE=iot-gate-imx8plus	 LREPO=compulab-bsp-setup-imx8mp.xml`
+`ucm-imx8m-mini` | `export MACHINE=ucm-imx8m-mini LREPO=compulab-bsp-setup-imx8.xml`
+`iot-gate-imx8`  | `export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-imx8.xml`
+`ucm-imx8m-plus` | `export MACHINE=ucm-imx8m-plus LREPO=compulab-bsp-setup-imx8.xml`
+`iot-gate-imx8plus` | `export MACHINE=iot-gate-imx8plus	 LREPO=compulab-bsp-setup-imx8.xml`
 
 
 ## Initialize repo manifests
@@ -34,7 +42,7 @@ repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b kirkston
 * CompuLab
 ```
 mkdir -p .repo/local_manifests
-wget --directory-prefix .repo/local_manifests https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/kirkstone/scripts/${LREPO}
+wget --directory-prefix .repo/local_manifests https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/unified-demo/scripts/${LREPO}
 ```
 
 * Sync Them all

@@ -6,6 +6,7 @@ EULA=1
 T=$(dirname $(dirname $(readlink -f ${BASH_SOURCE[0]})))"/templates"
 
 BD=$(cat <<< $@ | awk '$0=$NF')
+M=${MACHINE}
 
 if [[ -d ${BD} ]];then
 
@@ -17,7 +18,12 @@ else
 for _d in ${T}/*;do
     _file=$(basename ${_d})
     for _f in ${_d}/*;do
-        cat ${_f} >> conf/${_file}
+        [[ -d ${_f} ]] || cat ${_f} >> conf/${_file}
     done;
+    if [[ -d ${_d}/${M} ]];then
+        for _f in ${_d}/${M}/*;do
+            [[ -d ${_f} ]] || cat ${_f} >> conf/${_file}
+        done;
+    fi
 done
 fi
