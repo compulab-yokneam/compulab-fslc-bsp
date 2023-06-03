@@ -12,7 +12,7 @@
   <project name="meta-compulab" remote="compulab" revision="honister" path="sources/meta-compulab"/>
   <project name="meta-compulab-bsp" remote="compulab" revision="honister" path="sources/meta-compulab-bsp"/>
   <project name="meta-compulab-uefi" remote="compulab" revision="honister" path="sources/meta-compulab-uefi"/>
-  <project name="meta-bsp-imx8mm" remote="compulab" revision="kirkstone" path="sources/meta-bsp-imx8mm" >
+  <project name="meta-bsp-imx8mm" remote="compulab" revision="iot-gate-imx8_r3.2" path="sources/meta-bsp-imx8mm" >
       <linkfile src="." dest="sources/meta-compulab-som" />
   </project>
 
