@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 MACHINE=${MACHINE:-ucm-imx8m-plus}
-DISTRO=${DISTRO:-fslc-framebuffer}
+DISTRO=${DISTRO:-fslc-xwayland}
 EULA=1
 T=$(dirname $(dirname $(readlink -f ${BASH_SOURCE[0]})))"/templates"
 
