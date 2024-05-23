@@ -18,8 +18,8 @@ mkdir compulab-fslc-bsp && cd compulab-fslc-bsp
 
 Machine | Environment |
 --- | --- |
-`ucm-imx8m-mini` | `export MACHINE=ucm-imx8m-mini LREPO=compulab-bsp-setup-imx8mm.xml`
-`iot-gate-imx8`  | `export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-iot.xml`
+`~~ucm-imx8m-mini~~` | `~~export MACHINE=ucm-imx8m-mini LREPO=compulab-bsp-setup-imx8mm.xml~~`
+`~~iot-gate-imx8~~`  | `~~export MACHINE=iot-gate-imx8 LREPO=compulab-bsp-setup-iot.xml~~`
 `ucm-imx8m-plus` | `export MACHINE=ucm-imx8m-plus LREPO=compulab-bsp-setup-imx8mp.xml`
 `iot-gate-imx8plus` | `export MACHINE=iot-gate-imx8plus LREPO=compulab-bsp-setup-imx8mp.xml`
 
@@ -28,13 +28,13 @@ Machine | Environment |
 
 * FSL Community
 ```
-repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b kirkstone
+repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b scarthgap
 ```
 
 * CompuLab
 ```
 mkdir -p .repo/local_manifests
-wget --directory-prefix .repo/local_manifests https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/kirkstone/scripts/${LREPO}
+wget --directory-prefix .repo/local_manifests https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/scarthgap/scripts/${LREPO}
 ```
 
 * Sync Them all
@@ -46,10 +46,13 @@ repo sync
 
 * Initialize the build environment and build:
 
-Distro | Setup command  | Build command |
+NOTE | Use ``fslc-xwayland`` 'cause it enables systemd
+--- | --- |
+
+Distro | Setup command  | Image build command |
 --- | --- | --- |
 fslc-xwayland | DISTRO=fslc-xwayland source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k fsl-image-multimedia-full```
-fslc-framebuffer | DISTRO=fslc-framebuffer source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k fsl-image-network-full-cmdline```
+fslc-xwayland | DISTRO=fslc-xwayland source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k fsl-image-network-full-cmdline```
 
 * Get back to the build environment:
 ```
