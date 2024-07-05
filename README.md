@@ -34,7 +34,6 @@ repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b scarthga
 
 * CompuLab
 ```
-mkdir -p .repo/local_manifests
 wget --directory-prefix .repo/local_manifests https://raw.githubusercontent.com/compulab-yokneam/compulab-fslc-bsp/scarthgap/scripts/${LREPO}
 ```
 
