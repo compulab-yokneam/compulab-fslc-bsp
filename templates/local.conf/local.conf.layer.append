@@ -12,4 +12,4 @@ IMAGE_FEATURES += " package-management ssh-server-openssh "
 
 LICENSE_FLAGS_ACCEPTED = "commercial"
 
-INHERIT = "rm_work"
+INHERIT += "rm_work"
