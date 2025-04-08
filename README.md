@@ -54,6 +54,10 @@ Distro | Setup command  | Image build command |
 fslc-xwayland | DISTRO=fslc-xwayland source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k fsl-image-multimedia-full```
 fslc-xwayland | DISTRO=fslc-xwayland source compulab-setup-environment build-fslc-${MACHINE} | ```bitbake -k fsl-image-network-full-cmdline```
 
+* Enable HAB if required:
+```
+sed -i 's/# \(BBLAYERS.*hab\)/\1/' ${BUILDDIR}/conf/bblayers.conf
+```
 * Get back to the build environment:
 ```
 source compulab-setup-environment build-fslc-${MACHINE}
