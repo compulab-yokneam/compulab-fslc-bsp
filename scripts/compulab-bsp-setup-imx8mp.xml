@@ -6,7 +6,7 @@
   <project name="compulab-fslc-bsp" remote="compulab" revision="scarthgap" path="sources/compulab-fslc-bsp" >
       <linkfile src="meta-fslc/imx8mp" dest="sources/meta-fslc-som" />
       <linkfile src="meta-fslc/imx" dest="sources/meta-fslc-som-common" />
-      <linkfile src="tools/compulab-setup-env" dest="compulab-setup-env" />
+      <linkfile src="tools/compulab-setup-env" dest="compulab-setup-environment" />
   </project>
 
   <project name="meta-compulab" remote="compulab" revision="honister" path="sources/meta-compulab"/>

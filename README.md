@@ -56,5 +56,5 @@ fslc-xwayland | DISTRO=fslc-xwayland source compulab-setup-environment build-fsl
 
 * Get back to the build environment:
 ```
-source compulab-setup-env build-fslc-${MACHINE}
+source compulab-setup-environment build-fslc-${MACHINE}
 ```
