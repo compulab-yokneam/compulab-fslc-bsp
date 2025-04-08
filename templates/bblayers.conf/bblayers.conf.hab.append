@@ -1,0 +1,2 @@
+# Uncomment it if secure boot is required
+# BBLAYERS += " ${BSPDIR}/sources/meta-compulab-hab "
